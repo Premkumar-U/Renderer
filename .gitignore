@@ -1,0 +1,78 @@
+# ==========================================
+# CMake Build Directories & Outputs
+# ==========================================
+# Exclude standard and IDE-specific build output paths
+build/
+Build/
+build-*/
+out/
+bin/
+_deps/
+
+# ==========================================
+# CMake Generated Files (In case of in-source builds)
+# ==========================================
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+
+# ==========================================
+# C++ Compiled Binaries & Libraries
+# ==========================================
+# Executables
+*.exe
+*.out
+*.app
+
+# Static and Dynamic Libraries
+*.a
+*.lib
+*.la
+*.lai
+*.so
+*.dylib
+*.dll
+
+# Object files and Debugger files
+*.o
+*.obj
+*.pdb
+*.dwo
+
+# ==========================================
+# IDEs and Editor Specific Files
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# Visual Studio (MSVC)
+.vs/
+*.sln
+*.vcxproj
+*.user
+
+# Qt Creator
+CMakeLists.txt.user*
+
+# ==========================================
+# Operating System & Temp Files
+# ==========================================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+
