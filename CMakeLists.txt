@@ -4,7 +4,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(Renderer)
 
-add_executable(renderer main.cpp)
+add_executable(renderer src/main.cpp)
+
+target_include_directories(renderer PRIVATE "include")
 
 find_package(Boost REQUIRED)
 
