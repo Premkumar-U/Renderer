@@ -4,7 +4,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(Renderer)
 
-add_executable(renderer src/main.cpp)
+add_executable(renderer src/main.cpp 
+                        src/gradient_renderer.cpp 
+                        src/vector.cpp)
 
 target_include_directories(renderer PRIVATE "include")
 

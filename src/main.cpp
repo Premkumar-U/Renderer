@@ -1,4 +1,3 @@
-#include <boost/multi_array.hpp>
 #include <cmath>
 #include <exception>
 #include <fstream>
