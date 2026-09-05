@@ -44,6 +44,7 @@ struct Vector {
 };
 
 Vector cross_product(const Vector& lhs, const Vector& rhs);
+double dot_product(const Vector& lhs, const Vector& rhs);
 Vector operator-(const Vector& vector);
 [[nodiscard]]
 inline double length_squared(const Vector& vector);

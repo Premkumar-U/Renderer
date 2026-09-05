@@ -8,6 +8,11 @@ Vector cross_product(const Vector& lhs, const Vector& rhs)
         lhs.x * rhs.y - lhs.y * rhs.x);
 }
 
+double dot_product(const Vector& lhs, const Vector& rhs)
+{
+    return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.y;
+}
+
 Vector operator-(const Vector& vector)
 {
     return Vector { -vector.x, -vector.y, -vector.z };

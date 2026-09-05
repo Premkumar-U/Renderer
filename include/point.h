@@ -16,6 +16,8 @@ struct Point {
     {
     }
 
+    static const Point origin;
+
     friend Point operator+(const Vector& vector, const Point& point)
     {
         return Point { vector.x + point.x, vector.y + point.y, vector.z + point.z };

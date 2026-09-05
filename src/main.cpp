@@ -7,7 +7,10 @@
 #include "colour.h"
 #include "gradient_renderer.h"
 #include "image.h"
+#include "red_sphere_renderer.h"
+#include "sphere.h"
 #include "viewport.h"
+#include "world.h"
 
 void render_gradient(Image_8bit_colour* image)
 {
@@ -62,9 +65,19 @@ int main(int argc, char const* argv[])
 
     Camera camera { Point { 0, 0, 0 }, Vector { 0, 0, -1 }, Vector { 0, 1, 0 }, 1 };
     Viewport viewport { 2, image };
+
     Gradient_renderer renderer { camera, viewport };
 
     renderer.render(&image);
     write_ppm_file(image, "linear_gradient.ppm");
+
+    World world;
+    world.emplace_back(std::make_unique<Sphere>(Point { 0, 0, -1 }, 0.5));
+
+    Red_sphere_renderer red_sphere_renderer { camera, viewport };
+
+    red_sphere_renderer.render(&image, world);
+    write_ppm_file(image, "red_sphere_gradient.ppm");
+
     return 0;
 }
