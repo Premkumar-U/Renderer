@@ -10,7 +10,7 @@ Vector cross_product(const Vector& lhs, const Vector& rhs)
 
 double dot_product(const Vector& lhs, const Vector& rhs)
 {
-    return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.y;
+    return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z;
 }
 
 Vector operator-(const Vector& vector)
@@ -25,7 +25,7 @@ inline double length_squared(const Vector& vector)
 }
 
 [[nodiscard]]
-double length(const Vector& vector)
+inline double length(const Vector& vector)
 {
     return std::sqrt(length_squared(vector));
 }

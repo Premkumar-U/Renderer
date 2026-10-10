@@ -32,11 +32,6 @@ struct Vector {
         return Vector { vector.x / scalar, vector.y / scalar, vector.z / scalar };
     }
 
-    friend Vector operator/(double scalar, const Vector& vector)
-    {
-        return Vector { vector.x / scalar, vector.y / scalar, vector.z / scalar };
-    }
-
     friend std::ostream& operator<<(std::ostream& stream, const Vector& object)
     {
         return stream << object.x << ", " << object.y << ", " << object.z;
@@ -49,7 +44,7 @@ Vector operator-(const Vector& vector);
 [[nodiscard]]
 inline double length_squared(const Vector& vector);
 [[nodiscard]]
-double length(const Vector& vector);
+inline double length(const Vector& vector);
 [[nodiscard]]
 Vector unit_vector(const Vector& vector);
 
