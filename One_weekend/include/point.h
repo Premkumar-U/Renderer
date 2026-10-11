@@ -35,7 +35,7 @@ struct Point {
 
     friend Vector operator-(const Point& lhs, const Point& rhs)
     {
-        return Vector { rhs.x - lhs.x, rhs.y - lhs.y, rhs.z - lhs.z };
+        return Vector { lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z };
     }
 };
 

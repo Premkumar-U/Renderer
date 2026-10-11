@@ -17,7 +17,7 @@ void Red_sphere_renderer::render(Image_8bit_colour* image, const World& world) c
 
     for (size_t i = 0; i < image->height(); i++) {
         for (size_t j = 0; j < image->width(); j++) {
-            Point pixel_location = point_0_0_location + delta_u * static_cast<double>(i) + delta_v * static_cast<double>(j);
+            Point pixel_location = point_0_0_location + delta_u * static_cast<double>(j) + delta_v * static_cast<double>(i);
             Ray ray(camera_.location(), pixel_location - camera_.location());
 
             image->at(i, j) = ray_colour(ray, world);
